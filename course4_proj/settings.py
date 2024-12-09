@@ -51,6 +51,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'movies',
         'django_celery_results',
+        'django_celery_beat',
     ]
 
     MIDDLEWARE = [
@@ -160,3 +161,6 @@ class Dev(Configuration):
     # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("codio", "codio@example.com")]
